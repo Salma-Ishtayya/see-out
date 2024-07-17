@@ -1,0 +1,164 @@
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: Poppins;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+height: 100vh;
+}
+.container
+{
+  display: flex;
+  flex-direction: column;
+ 
+  justify-content: start;
+  
+}
+.main{
+    border-radius: 10px;
+    border: .5px solid#e8889333;
+    background-color: #03030386 ;    height:530px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 950px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: start;
+    
+    animation-name: onbord;
+    animation-duration: .1s;
+    animation-delay: .7s;  /* time to start execute */
+    animation-fill-mode: forwards;
+
+}
+.back-btn{
+  height: 50px;
+  width: 50px;
+  background-color: #ffffff00;
+  border: none;
+}
+.back-icon{
+  height: 40px;
+  width: 40px;
+  color: #ac6cff;
+    cursor: pointer;
+  margin-right: 160px;
+}
+.mes-icon{
+  margin-top: 45px;
+  margin-left: 20px;
+ } 
+
+
+.top{
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  padding-left: 10px !important;
+
+}
+
+
+.title{
+  font-weight: 800;
+  font-size: 30px;
+  color: #ffffff44;
+  flex: 1;
+  text-align: center;
+  margin: 0px;
+  animation-name: ontit;
+  animation-duration: .3s;
+  animation-delay: 1.8s;  /* time to start execute */
+  animation-fill-mode: forwards;
+  
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+.input-f{
+  background-color: #5348700c;
+  height: 25px;
+  width: 356px;
+  justify-content: center;
+  border: 1px solid #9f50752b;
+  color: #d5b8d4;
+  font-size: 18px;
+  padding: 10px;
+margin-top: 10px;
+border-radius:5px ;
+  
+animation-name: onbordinp;
+animation-duration: .09s;
+animation-delay: 1s;  /* time to start execute */
+animation-fill-mode: forwards;
+  
+}
+
+.input-f::placeholder{
+  color: #b8c4db92;
+  font-size: 15px;
+}
+
+.b-cont{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+}
+.btn {
+  width:380px;
+  height: 45px;
+  padding: 10px;
+  background-color:  #2c43622a;
+  color: #ffffff46;
+  border: 1px solid #9f507551;
+  border-radius:5px ;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  animation-name: onbut;
+  animation-duration: .1s;
+  animation-delay: 2.3s;  /* time to start execute */
+  animation-fill-mode: forwards;
+}
+
+
+.btn:hover {
+  background: linear-gradient(
+    261.19deg,
+    #da5a695d,
+    #163b6e8b
+  );
+  border: .1px solid #ffffff9a;
+}
+textarea {
+    width: 356px !important; /* Set the width */
+    height: 120px !important ; /* Set the height */
+    resize: none; /* Disable resizing */
+    padding: 10px !important;
+}
+
+.mes-icon{
+    height:460px;
+    width: 400px;
+   
+
+}
+.con-cont{
+    height: 400px;
+    width: 380px;
+
+}
+/* Style for the image */
+#Message {
+    transition: opacity 1s; /* Transition effect with a duration of 1 second */
+  }
+  

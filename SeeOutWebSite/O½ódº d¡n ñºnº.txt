@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1</title>
+    <link rel="stylesheet" href="./css/level-1.css">
+</head>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background-color: #1A162B;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+
+    }
+
+    .top-lev {
+        background-color: rgb(1, 1, 2);
+        height: 70px;
+        width: 800px;
+        margin-top: 5px;
+        left: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Lsec,
+    .Msec,
+    .Rsec {
+        height: inherit;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .Msec {
+        justify-content: center !important;
+    }
+
+    .Rsec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center !important;
+    }
+
+    .logo {
+        height: 43px;
+        width: 170px;
+    }
+
+    .lev-num {
+        color: #fff;
+
+    }
+
+    .top-lev-ic {
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .timer {
+        height: auto;
+        width: auto;
+        color: #fff;
+        font-size: 19px;
+        font-weight: 500;
+        margin-right: 10px;
+
+    }
+
+    .bot-lev {
+        background-color: rgb(1, 1, 2);
+        height: 60px;
+        width: 800px;
+        margin-top: 76vh;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .runB {
+        height: 45px;
+        width: 100px;
+        background-color: #655dc067;
+        cursor: pointer;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 600;
+        border: none;
+        border-radius: 30px;
+        margin-top: 5px;
+    }
+
+    .runB:hover {
+        background: linear-gradient(261.19deg,
+                #655dc067,
+                #163b6e8b);
+    }
+
+    .lev1 {
+        display: block;
+        /* display: none;*/
+    }
+
+    /********************************************************   stop */
+    .stop {
+        height: 250px;
+        width: 450px;
+        background-color: #00000098;
+        border: 1px solid #eff0d0;
+        border-radius: 18px;
+        display: block;
+        padding: 15px;
+        top: 50%;
+        left: 50%;
+        z-index: 1001;
+        position: absolute;
+        transform: translate(-50%, -50%) scale(.01);
+        transition: transform 0.4s;
+        visibility: hidden;
+
+    }
+
+    .openStop {
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .audio-control {
+        height: 65px;
+        width: inherit;
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .audio-ic {
+        height: 70px;
+        width: 70px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .rang {
+        margin-left: 30px;
+        width: 230px;
+        cursor: pointer;
+
+    }
+
+    .buts {
+        height: 100px;
+        width: 375px;
+        display: flex;
+        padding-left: 36px;
+        padding-right: 36px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .eB {
+        height: 60px;
+        width: 60px;
+        background-color: #00000000;
+        border: none;
+        cursor: pointer;
+    }
+
+    .miniIc {
+        height: inherit;
+        width: inherit;
+    }
+</style>
+
+<body background="./icons/bluredbackground.png">
+    <div class="lev1">
+        <div class="top-lev">
+            <div class="Lsec"><img src="./icons/logo.png" class="logo"></div>
+            <div class="Msec">
+                <h2 class="lev-num">Level 1</h2>
+            </div>
+            <div class="Rsec">
+                <p class="timer">timer</p>
+                <button class="eB"><img src="./icons/about1.png" class="top-lev-ic" id="about"
+                    onmouseover="changeic('./icons/about2.png','about')"
+                    onmouseleave="changeic('./icons/about1.png','about')"></button>
+
+                    <button class="eB" onclick="openStop()"><img src="./icons/pause1.png" class="top-lev-ic" id="stop"
+                    onmouseover="changeic('./icons/pause2.png','stop')"
+                    onmouseleave="changeic('./icons/pause1.png','stop')" 
+                    ></button>
+            </div>
+        </div>
+        <div id="container">
+            <div id="all-blocks">
+                <div class="block block-4 before">{ <br /> cout&lt;&lt;"Hi!"; <br /> }</div>
+                <div class="block block-2 before">&lt;iostream&gt;</div>
+                <div class="block block-1 after">#include</div>
+                <div class="block block-3 after">main ( )</div>
+            </div>
+        </div>
+        <div class="bot-lev">
+            <button class="runB" id="run-button"> Run </button>
+        </div>
+    </div>
+
+    <div class="stop" id="stopclc">
+        <div class="music">
+            <div class="audio-control">
+                <img class="audio-ic" src="./icons/audio.png">
+                <input type="range" class="rang">
+            </div>
+            <div class="audio-control">
+                <img class="audio-ic" src="./icons/M1.png">
+                <input type="range" class="rang">
+            </div>
+        </div>
+        <div class="buts">
+            <button class="eB" onmouseover="changeic('./icons/back2.png','back2')"
+                onmouseleave="changeic('./icons/back1.png','back2')"><img src="./icons/back1.png" class="miniIc"
+                    id="back2"></button>
+            <button class="eB" onmouseover="changeic('./icons/play2.png','play')"
+                onmouseleave="changeic('./icons/play1.png','play')" onclick="continueGame()"><img
+                    src="./icons/play1.png" class="miniIc" id="play"></button>
+            <button class="eB" onmouseover="changeic('./icons/restart2.png','restart2')"
+                onmouseleave="changeic('./icons/restart1.png','restart2')"><img src="./icons/restart1.png"
+                    class="miniIc" id="restart2"></button>
+        </div>
+    </div>
+
+    <script src="./js/level-1.js"></script>
+    <script src="./js/level-1s.js"></script>
+</body>
+
+</html>
